@@ -10,7 +10,8 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 # SSH接続設定
 set :ssh_options, {
-  keys: ['~/.ssh/rails_deploy.pem'] 
+  auth_methods: [ 'publickey' ],
+  keys: ['~/.ssh/rails_deploy.pem']
 }
 
 # 保存しておく世代の設定
